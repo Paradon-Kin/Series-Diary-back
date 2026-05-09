@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 
-	"c-drama-hub/config"
-	"c-drama-hub/routes"
+	"series-diary/config"
+	"series-diary/routes"
 
 	"github.com/joho/godotenv" // นำเข้าเครื่องมือโหลดตู้เซฟ
 )

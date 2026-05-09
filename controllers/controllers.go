@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"time"
 
-	"c-drama-hub/config"
-	"c-drama-hub/models"
+	"series-diary/config"
+	"series-diary/models"
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"

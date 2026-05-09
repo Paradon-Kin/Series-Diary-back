@@ -4,7 +4,7 @@ import (
 	"log"
 	"os" // แพ็กเกจสำหรับอ่านไฟล์ .env
 
-	"c-drama-hub/models"
+	"series-diary/models"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

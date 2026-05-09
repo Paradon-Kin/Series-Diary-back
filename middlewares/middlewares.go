@@ -1,8 +1,8 @@
 package middlewares
 
 import (
-	"c-drama-hub/config" // เรียกใช้ตรายางจากแผนกช่าง
 	"net/http"
+	"series-diary/config"
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"

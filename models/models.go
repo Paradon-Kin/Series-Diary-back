@@ -14,7 +14,9 @@ type Series struct {
 	Title         string
 	Genre         string
 	TotalEpisodes int
+	CoverURL      string
 	AvgRating     float64 `gorm:"default:0"`
+	UserID        uint
 }
 
 type WatchHistory struct {
