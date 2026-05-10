@@ -12,7 +12,7 @@ func SetupRouter() *gin.Engine {
 	r := gin.Default()
 
 	r.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://localhost:5173"}, // 👈 แก้ตรงนี้! เปลี่ยนจาก "*" เป็น URL ของ React
+		AllowOrigins:     []string{"http://localhost:5173"},
 		AllowMethods:     []string{"GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"},
 		AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
 		ExposeHeaders:    []string{"Content-Length"},
@@ -26,7 +26,7 @@ func SetupRouter() *gin.Engine {
 
 	// 🌟 โซน VIP (Protected)
 	api := r.Group("/api")
-	api.Use(middlewares.AuthMiddleware()) // เอายามมาเฝ้าที่ประตูด้านหน้านี้
+	api.Use(middlewares.AuthMiddleware())
 	{
 		api.POST("/series", controllers.AddSeries)
 		api.GET("/series", controllers.GetSeries)

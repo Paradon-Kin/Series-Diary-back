@@ -25,7 +25,6 @@ func Register(c *gin.Context) {
 	hashedPassword, _ := bcrypt.GenerateFromPassword([]byte(input.Password), 10)
 	user := models.User{Username: input.Username, Password: string(hashedPassword)}
 
-	// สังเกตว่าเราใช้ config.DB แทน db ตัวเดิมแล้ว
 	if err := config.DB.Create(&user).Error; err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "ชื่อผู้ใช้นี้มีคนใช้แล้ว!"})
 		return

@@ -14,7 +14,7 @@ func AddSeries(c *gin.Context) {
 
 	// 1. ดึง ID ของคนที่ล็อกอินอยู่
 	userIDFloat, _ := c.Get("user_id")
-	input.UserID = uint(userIDFloat.(float64)) // 👈 ประทับตราว่าใครเป็นคนเพิ่มซีรีส์เรื่องนี้
+	input.UserID = uint(userIDFloat.(float64)) // ประทับตราว่าใครเป็นคนเพิ่มซีรีส์เรื่องนี้
 
 	config.DB.Create(&input)
 	c.JSON(http.StatusOK, gin.H{"message": "เพิ่มซีรีส์สำเร็จ", "data": input})
